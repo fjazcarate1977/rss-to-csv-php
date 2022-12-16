@@ -50,7 +50,7 @@ function rss_to_array($tag, $array, $url)
         foreach ($array as $key => $value) {
             $val = $node->getElementsByTagName($value)->item(0)->nodeValue;
             if ($value == 'availability') {
-                $items[$value] = $val == 'in stock' ? 0 : 1;
+                $items[$value] = $val == 'in stock' ? 1 : 0;
             } elseif ($value == 'price') {
                 $newval = str_replace(' EUR', '', $val);
                 $items[$value] = number_format($newval, 2, ',', '');
