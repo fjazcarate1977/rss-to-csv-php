@@ -25,16 +25,12 @@ function parser_stock_level($val)
     switch ($val) {
         case "Sin stock":
             return 0;
-            break;
         case "Nivel de stock: escaso":
             return 1;
-            break;
         case "Nivel de stock: moderado":
-            return 2;
-            break;
-        case "Nivel de stock: amplio":
             return 3;
-            break;
+        case "Nivel de stock: amplio":
+            return 4;
         default:
             return 0;
     }
